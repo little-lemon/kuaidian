@@ -1,0 +1,132 @@
+<layout name="Index/header_footer" />
+<form action=""  method="post" class="definewidth m20" id="form_edit"  enctype="multipart/form-data">
+    <table class="table table-bordered table-hover definewidth m10">
+        <tr>
+            <td width="10%" class="tableleft">真实姓名</td>
+            <td>{$admin.truename}</td>
+        </tr>
+        <tr>
+            <td class="tableleft">原密码</td>
+            <td>
+            	<input type="password" name="ypassword" id="ypassword" placeholder="可留空" autocomplete="off" pattern="[\S]{6}[\S]*" title="密码不少于6个字符"/>
+            	<label  id="pwdtip1" style="color:red;"></label>
+            </td>
+        </tr>
+        <tr>
+            <td class="tableleft">新密码</td>
+            <td>
+            	<input type="password" name="password" id="password" autocomplete="off" placeholder="可留空" pattern="[\S]{6}[\S]*" title="密码不少于6个字符"/>
+            	<label  id="pwdtip2" style="color:red;"></label>
+            </td>
+        </tr>
+        <tr>
+            <td class="tableleft">确认密码</td>
+            <td>
+            	<input type="password" name="rpassword" id="rpassword" autocomplete="off" placeholder="可留空" pattern="[\S]{6}[\S]*" title="密码不少于6个字符"/>
+            	<label  id="pwdtip3" style="color:red;"></label>
+            </td>
+        </tr>
+        <tr>
+            <td class="tableleft">餐厅名称</td>
+            <td>{$admin.storename}</td>
+        </tr>
+        <tr>
+            <td class="tableleft">餐厅LOGO</td>
+            <td>
+            <?php showImage($admin['sm_logo'], 60,60); ?>
+            <input type="file" name="logo" />
+            </td>
+        </tr>
+        <tr>
+            <td class="tableleft">手机号码</td>
+            <td>
+            	<input type="text" name="tel" id="tel" value="{$admin.tel}" autocomplete="off" required pattern="^(1)[0-9]{10}$" title="请填写正确的手机号"/>
+            	<label  id="teltip" style="color:red;"></label>
+            </td>
+        </tr>
+        <input type="hidden" name="id" value="{$admin.id}" />
+        <tr>
+            <td class="tableleft" id="tips" style="color:red;text-align:center;"></td>
+            <td>
+                <button type="submit" class="btn btn-primary" type="button" id="save">保存</button>				 &nbsp;&nbsp;
+                <button type="button" class="btn btn-success" name="backid" id="backid">返回</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+$(function () {   
+	//返回
+	$('#backid').click(function(){
+			window.location.href="{:U('Store/info')}";
+	 });
+	
+	//验证原密码是否正确
+	  $("#ypassword").blur(function(){
+	    var ypassword = $(this).val();
+	    var admin_pwd = {$admin['password']};
+	    if(ypassword != admin_pwd)
+	    {
+	    	$('#pwdtip1').html('原密码错误');
+	    	return false;
+	    }
+	    return true;
+	  });
+	  $("#ypassword").focus(function(){
+		    $('#pwdtip1').html('');
+		    return true;
+      });
+	
+	//验证新密码的格式
+	$("#password").blur(function(){
+		var password = $(this).val();
+		var reg = /^[0-9A-Za-z]{6,}$/;
+		if(!reg.test(password))
+		{
+			$('#pwdtip2').html('密码少于6个字符');
+			return false;
+		}
+		return true;
+	});
+	$("#password").focus(function(){
+	    $('#pwdtip2').html('');
+	    return true;
+  	});
+	
+	//验证确认密码
+	$('#rpassword').blur(function(){
+		var password = $('#password').val();
+		var rpassword = $('#rpassword').val();
+		if(password != rpassword)
+		{
+			$('#pwdtip3').html('两次密码输入不一致'); //方法1
+			/*//方法2
+			var html = "<label  style=\"color:red;\">两次密码输入不一致</label>";
+			$('#pwdtip3').append(html);*/
+			return false;
+		}
+		return true;
+	});
+	$("#rpassword").focus(function(){
+	    $('#pwdtip3').html('');
+	    return true;
+  	});
+	
+	//手机号码验证  
+	$('#tel').blur(function(){
+		var tel = $(this).val();
+		var reg = /^(1)[0-9]{10}$/;
+		if(!reg.test(tel))
+		{
+			$('#teltip').html('请填写正确的手机号');
+	    	return false;
+		}
+		return true;
+	});
+	$("#tel").focus(function(){
+	    $('#teltip').html('');
+	    return true;
+  	});
+	
+});
+</script>

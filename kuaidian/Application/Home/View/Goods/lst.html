@@ -1,0 +1,126 @@
+<layout name="Index/header_footer" />
+
+<div class="panel-body">
+<div class="panel-default">
+<form class="form-inline definewidth m20" action="__SELF__"  method="get">  
+    
+    菜名：
+    <input type="text" name="goods_name" id="goods_name"class="abc input-default" placeholder="输入菜名搜索" value="" >&nbsp;&nbsp;  
+    
+        <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; 
+        <button type="button" class="btn btn-success" id="addnew">添加菜品</button>
+    
+</form>
+</div>
+<table class="table table-bordered table-hover definewidth m10">
+    <thead>
+    <tr>
+        <th width="2%"><input id="ids" type="checkbox"/></th>
+        <th>菜品ID</th>
+        <th>所属分类</th>
+        <th>菜品名称</th>
+        <th>菜品价格</th>
+        <th>菜品图片</th>
+        <th>销量</th>
+        <th>是否推荐</th>
+        <th>添加时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <if condition="!empty($goodsData)">
+    <foreach name="goodsData" item="vo">
+        <tr>
+	        <td><input type="checkbox" name="ids" value="{$vo['id']}"/></td>
+	        <td>{$vo['id']}</td>
+	        <td>{$vo['cat_name']}</td>
+	        <td>{$vo['goods_name']}</td>
+	        <td>{$vo['goods_price']}</td>
+	        <td><?php showImage($vo['goods_sm_pic'], 60,60); ?></td>
+	        <td>{$vo['sale_num']}</td>
+	        <td><if condition="$vo['is_recommend'] eq 1">是<else />否</if></td>
+	        <td>{$vo['addtime']|date="Y-m-d H:i:s",###}</td>
+	        <td>  <a href="{:U('goods/edit', array('id'=>$vo['id']))}">编辑</a></td> 
+        </tr>   
+    </foreach>	
+    <else />
+        <tr><td colspan="11">没有相关结果!</td></tr>
+    </if>
+</table>
+	<div style="margin-left: 35px;margin-top: 10px;position: absolute;">选中项：<span id="del" style="color:#0088cc;cursor:pointer;">删除</span></div>
+    <div class="digg" style="margin-top:10px;float:right;margin-right: 30px;">
+               {$page}
+    </div>
+</div>
+
+<script type ="text/javascript" src="__PUBLIC__/artDialog/artDialog.js?skin=default"></script>
+<script type ="text/javascript" src="__PUBLIC__/artDialog/plugins/iframeTools.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/user/js/jquery.validate.js"></script>
+<script type="text/javascript" src="__PUBLIC__/user/js/jquery.form.js"></script>
+
+<script>
+$(function(){	
+	//添加分类
+	$('#addnew').click(function(){
+		//window.location.href="{:U('Goods/add')}";
+		art.dialog.open(
+				"{:U('goods/add')}",{
+					id:'add_dialog',
+					title:'添加分类',
+					width:550,
+					height:400,
+					lock:true,
+					close:function(){
+						art.dialog.open.origin.location.href="{:U('Goods/lst')}";
+					}
+				});
+	});
+	
+	//全选设置
+	$('#ids').click(function(){
+	       if($(this).is(':checked')){
+	           $(this).parents('table').find('input[type=checkbox]').prop("checked", true);
+	       }
+	       else{
+	           $(this).parents('table').find('input[type=checkbox]').prop("checked", false);
+	       }
+	   });
+	
+ 	//删除设置
+	$('#del').click(function(){
+		var _checkbox = $('table').find('input[name=ids]');
+		var str = '';
+		_checkbox.each(function(){
+			if($(this).is(':checked')){
+				str += $(this).val()+',';
+			}
+		});
+		if(str == ''){
+			return false;
+		}
+		else{
+				var d = art.dialog({
+					title:'提示',
+					content:'确定要删除选中项吗?',
+					lock:true,
+					cancel:true,
+					width:300,
+					ok:function(){
+						$.ajax({
+							type:"GET",
+							url:"<?php echo U('ajaxGoodsDel','',FALSE)?>/goods_ids/"+str,
+							success:function(data)
+							{
+								window.location.reload(); 
+							}
+						});
+					},
+					okValue: '确定',
+					cancelValue: '关闭'
+				});
+		}
+	});
+ 	
+ 	
+})
+</script>

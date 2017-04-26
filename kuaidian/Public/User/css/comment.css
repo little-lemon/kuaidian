@@ -1,0 +1,40 @@
+/* CSS Document */
+@CHARSET "UTF-8";
+.logo {
+	padding:0;
+}
+
+.cus-copy p{
+	text-align:center;
+}
+
+#footer {
+	background-color: #666;
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+	color: #eee;
+}
+
+.left {
+	float:left;
+}
+
+.line_height {
+/*	height:25px;
+	line-height:25px;*/
+	padding-top:5px;
+}
+
+.tooltips {
+	color: #428bca;
+	font-weight: bold;
+}
+
+.star
+{
+/*	width:10px;
+	height:10px;
+	border:1px solid #808080;*/
+	cursor:pointer;
+}

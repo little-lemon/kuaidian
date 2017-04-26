@@ -1,0 +1,410 @@
+[ 2017-03-30T23:30:35+08:00 ] 127.0.0.1 /index.php/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `kuaidian_store` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `kuaidian_store` WHERE ( status=1 AND ischeck=1 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: username D:\wamp\www\kuaidian\Application\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.134008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-03-30T23:30:37+08:00 ] 127.0.0.1 /index.php/User/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:30:38+08:00 ] 127.0.0.1 /index.php/User/Index/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:30:40+08:00 ] 127.0.0.1 /index.php/User/Goods/goods/store_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `kuaidian_goods` WHERE `store_id` = '1'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username D:\wamp\www\kuaidian\Application\Runtime\Cache\User\43bcc6f13c7c6d4d98974aae1a781249.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-03-30T23:30:44+08:00 ] 127.0.0.1 /index.php/User/Goods/ajaxAddToCart/storeId_goodsId_count/1,4,+,1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_goods` [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-30T23:30:46+08:00 ] 127.0.0.1 /index.php/User/Cart/lst/storeId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_store` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`storename`,`sm_logo` FROM `kuaidian_store` WHERE `id` = '1'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `kuaidian_goods` [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `kuaidian_goods` WHERE `store_id` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `kuaidian_goods` WHERE `id` IN (4)  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: username D:\wamp\www\kuaidian\Application\Runtime\Cache\User\9e61ba3ea23345addd56efd07e3604be.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-30T23:31:23+08:00 ] 127.0.0.1 /index.php/User/Cart/ajaxOrderSubmit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:31:23+08:00 ] 127.0.0.1 /index.php/User/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:31:23+08:00 ] 127.0.0.1 /index.php/User/Index/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:31:28+08:00 ] 127.0.0.1 /index.php/User/Index/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:31:30+08:00 ] 127.0.0.1 /index.php/User/Index/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2017-03-30T23:31:31+08:00 ] 127.0.0.1 /index.php/User/Index/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-03-30T23:31:32+08:00 ] 127.0.0.1 /index.php/User/Index/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:31:33+08:00 ] 127.0.0.1 /index.php/User/Index/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-03-30T23:31:34+08:00 ] 127.0.0.1 /index.php/User/Index/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:31:40+08:00 ] 127.0.0.1 /index.php/User/Index/checkVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `kuaidian_user` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\kuaidian\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:31:44+08:00 ] 127.0.0.1 /index.php/User/Index/checkVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `kuaidian_user` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\kuaidian\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-03-30T23:31:45+08:00 ] 127.0.0.1 /index.php/User/Index/checkVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_user` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\kuaidian\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\kuaidian\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:31:46+08:00 ] 127.0.0.1 /index.php/User/Index/loginAction
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_user` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`username`,`status` FROM `kuaidian_user` WHERE `username` = '18459183674' AND `password` = 'abc123' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-03-30T23:31:48+08:00 ] 127.0.0.1 /index.php/User/Cart/lst/storeId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_store` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`storename`,`sm_logo` FROM `kuaidian_store` WHERE `id` = '1'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `kuaidian_goods` [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `kuaidian_goods` WHERE `store_id` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `kuaidian_goods` WHERE `id` IN (4)  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-30T23:32:01+08:00 ] 127.0.0.1 /index.php/User/Cart/ajaxOrderSubmit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_order` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\kuaidian\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\kuaidian\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `kuaidian_order` (`store_id`,`total_price`,`scr_name`,`scr_tel`,`scr_address`,`room_time`,`payment_method`,`mark`,`add_times`,`order_number`,`user_id`) VALUES ('1','3.00','fang','18459183674','闽江学院 3区1','0','0','','1490887921','1490887921796034','1') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `kuaidian_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_price` FROM `kuaidian_goods` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `kuaidian_order_goods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `kuaidian_order_goods` (`order_number`,`store_id`,`user_id`,`goods_id`,`goods_number`,`goods_price`) VALUES ('1490887921796034','1','1','4','1','2.00') [ RunTime:0.0210s ]
+
+[ 2017-03-30T23:32:03+08:00 ] 127.0.0.1 /index.php/User/Order/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_order` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `kuaidian_order` WHERE `user_id` = '1' ORDER BY post_status asc,add_times desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `kuaidian_store` [ RunTime:0.0060s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `kuaidian_order_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490887921796034'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490799982776150'  [ RunTime:0.0000s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490799736709038'  [ RunTime:0.0010s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490798933977566'  [ RunTime:0.0000s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490798108195719'  [ RunTime:0.0000s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490632579262803'  [ RunTime:0.0010s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '7' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '8' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490540043306152'  [ RunTime:0.0010s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490469085359239'  [ RunTime:0.0000s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490540417733262'  [ RunTime:0.0000s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `storename` FROM `kuaidian_store` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `goods_id`,`goods_price`,`goods_number` FROM `kuaidian_order_goods` WHERE `order_number` = '1490540625424479'  [ RunTime:0.0010s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '4' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `goods_name` FROM `kuaidian_goods` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\kuaidian\Application\Runtime\Cache\User\0cc1e298d7db3c7a8500acedc0645e75.php 第 112 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-30T23:32:10+08:00 ] 127.0.0.1 /index.php/User/Cart/lst/storeId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `kuaidian_store` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`storename`,`sm_logo` FROM `kuaidian_store` WHERE `id` = '1'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `kuaidian_goods` [ RunTime:0.0070s ]
+SQL: SELECT `id` FROM `kuaidian_goods` WHERE `store_id` = '1'  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: goodsData D:\wamp\www\kuaidian\Application\User\Controller\CartController.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: goodsData D:\wamp\www\kuaidian\Application\User\Controller\CartController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

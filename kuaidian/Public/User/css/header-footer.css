@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+.logo {
+	padding:0;
+}
+
+.cus-copy p{
+	text-align:center;
+}
+
+#footer {
+	background-color: #666;
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+	color: #eee;
+}

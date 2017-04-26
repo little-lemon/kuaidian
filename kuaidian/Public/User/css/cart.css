@@ -1,0 +1,218 @@
+@CHARSET "UTF-8";
+/* CSS Document */
+.left {
+	float:left;
+}
+
+.order {
+	border-top:3px solid #339933;
+	border-left:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	border-radius:10px;
+	display:inline-block;
+	width:100%;
+	margin:1px;
+	padding:0;
+}
+
+.store-logo {
+	margin:15px 5px 15px 10px;
+	height:55px;
+	width:55px;
+}
+
+.order-title {
+	border-bottom:1px solid #CCCCCC;
+}
+
+.order-title h3 {
+    font-family: "Microsoft YaHei","微软雅黑","Microsoft JhengHei";
+    color: #808080;
+	display:inline
+}
+
+.order-line {
+	border-left:1px solid #999999; 
+	height:20px;
+	margin-left:5px;
+	margin-right:5px;
+	display:inline
+}
+
+.order-details {
+	display:inline;
+	vertical-align:middle;
+	color:#808080;
+}
+
+.order-details-2 {
+	vertical-align:right;
+	color: #808080;
+	height:82px;
+	line-height:82px;
+	float:right;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+.width {
+   width:598px;
+}
+
+.itemname {
+	height:37px;
+	line-height:37px;
+    padding-left:10px;
+	/*width:260px;*/
+	width:45%;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:-4px;
+}
+
+.itemquantity {
+	height:37px;
+	line-height:37px;
+	/*width:180px;*/
+	width:25%;
+	display:inline-block;
+	vertical-align:top;
+   /* text-align: center;*/
+	margin-right:-4px;
+}
+
+.itemtotal {
+	height:37px;
+	line-height:37px;
+    padding-right:10px;
+    text-align:right;
+	/*width:150px;*/
+	width:30%;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:-4px;
+}
+
+.itemtotal-2 {
+	height:37px;
+	line-height:37px;
+    padding-right:10px;
+    text-align:right;
+	/*width:150px;*/
+	margin-right:-4px;
+}
+
+.empty-cart{
+	display:inline;
+	text-indent:50px;
+	color:#808080;
+}
+
+.bottom_border{
+	height: 24px;
+	background: url("/Public/User/images/cart/border6.png")  repeat-x;
+	position: relative;
+	bottom: -14px;
+	
+}
+
+.clear {
+	margin:0;
+	padding:0;
+}
+
+.checkout {
+	border-top:3px solid #3399FF;
+	border-left:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	border-radius:10px;
+	/*width:560px;*/
+	display:inline-block;
+	width:100%;
+	/*float:left;*/
+	margin:1px;
+	padding:0;
+	/*margin-left:3%;*/
+}
+
+.checkout-title {
+	padding-left:10px;
+	font-family:"Microsoft YaHei","微软雅黑","Microsoft JhengHei";
+    color:#808080;
+	display:inline;
+	height:82px;
+	line-height:82px;
+}
+
+.addrManagement{
+	float:right;
+	color: #808080;
+	height:82px;
+	line-height:82px;
+	cursor:pointer;
+}
+
+.checkout-field {
+	font-family:"Microsoft YaHei","微软雅黑","Microsoft JhengHei";
+    color:#999999;
+}
+
+
+.sendTime {
+    height:30px;
+	line-height:30px;
+    border:1px solid #d9d9d9;
+    font-family:"Microsoft YaHei","微软雅黑","Microsoft JhengHei";
+    color:#808080;
+    border-radius:2px;
+}
+
+/*/////////*/
+.f-orders{
+	background: url("/Public/User/images/cart/orderConfirm.png") no-repeat;
+}
+
+.room-pay>li {
+	float: left;
+	padding:0;
+	border:none;
+	width:120px;
+	text-align:center;
+	height:37px;
+	line-height:37px;
+	font-family:"SimHei" "黑体" "Microsoft JhengHei";
+	font-size:18px;
+	list-style:none;
+}
+
+.normal_btn{
+	background-position:-28px -44px;
+}
+
+
+.disable_btn{
+	background-position:-28px -86px;
+}
+
+.room-pay>li.active {
+	padding: 0;background-position:-28px -2px;
+	color: #34D209 !important;
+}
+
+.room-pay>li>a {
+	color:#707070;
+	outline:none; 
+	hide-focus:expression(this.hideFocus = true); 
+}
+
+li.disable {
+	color:#999;margin-left:25px;
+	cursor:default;
+}
+
+li.disable a {
+	color:#999;
+	cursor:default;
+}

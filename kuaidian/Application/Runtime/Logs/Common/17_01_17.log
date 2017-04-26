@@ -1,0 +1,48 @@
+[ 2017-01-17T00:01:42+08:00 ] 127.0.0.1 /index.php/css/jquery.ui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+ERR: 无法加载模块:Css
+
+[ 2017-01-17T00:01:42+08:00 ] 127.0.0.1 /index.php/js/jquery.ui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.007000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.080004s ]
+ERR: 无法加载模块:Js
+
+[ 2017-01-17T00:01:42+08:00 ] 127.0.0.1 /index.php/js/jquery.form.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+ERR: 无法加载模块:Js
+
+[ 2017-01-17T00:01:42+08:00 ] 127.0.0.1 /index.php/js/jquery.validate.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008001s ]
+ERR: 无法加载模块:Js
+
+[ 2017-01-17T00:01:43+08:00 ] 127.0.0.1 /index.php/css/jquery.ui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:Css
+
+[ 2017-01-17T00:01:43+08:00 ] 127.0.0.1 /index.php/js/jquery.ui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:Js
+
+[ 2017-01-17T00:01:43+08:00 ] 127.0.0.1 /index.php/js/jquery.validate.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Js
+
+[ 2017-01-17T00:01:43+08:00 ] 127.0.0.1 /index.php/js/jquery.form.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:Js
+

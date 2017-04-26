@@ -1,0 +1,18 @@
+[ 2017-03-08T21:40:21+08:00 ] 127.0.0.1 /index.php/checkVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:CheckVerify
+
+[ 2017-03-08T22:58:40+08:00 ] 127.0.0.1 /index.php/registerAction
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:RegisterAction
+
+[ 2017-03-08T22:58:50+08:00 ] 127.0.0.1 /index.php/registerAction
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:RegisterAction
+

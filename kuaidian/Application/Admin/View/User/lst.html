@@ -1,0 +1,128 @@
+<layout name="Index/header_footer" />
+<div class="panel-body">
+<div class="panel-default">
+<form class="form-inline" action="__SELF__"  method="get">  
+    店铺名称：
+    <input type="text" name="user_name" id="appname"class="abc input-default" placeholder="输入店铺名称搜索"  value="<?php echo I(get.username); ?>" />&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; 
+</form>
+</div>
+<table class="table table-bordered table-hover definewidth m10">
+    <thead>
+    <tr>
+        <th width="2%"><input id="ids" type="checkbox"/></th>
+        <th>用户ID</th>
+        <th>用户名</th>
+        <th>注册时间</th>
+        <th>状态</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <if condition="!empty($data)">
+    <foreach name="data" item="vo">
+        <tr>
+        <td><input type="checkbox" name="ids" value="{$vo['id']}"/></td>
+        <td>{$vo['id']}</td>
+        <td>{$vo['username']}</td>
+        <td><if condition="$vo['addtime']">{$vo['addtime']|date="Y-m-d H:i:s",###}<else />0</if></td>
+        <td><if condition="$vo['status'] == 1"><font color="blue">正常</font><else /><font color="red">禁用</font></if></td>
+        <td>
+        <if condition="$vo['status'] == 0">
+                <a href="javascript:void(0);"  class="enable" _userid="{$vo['id']}">启用</a>
+        </if>
+        </td>
+        
+        </tr>   
+    </foreach>	
+    <else />
+        <tr><td colspan="11">没有相关结果!</td></tr>
+    </if>
+</table>
+<div style="margin-left: 35px;margin-top: 10px;position: absolute;">选中项：<span id="disable" style="color:#0088cc;cursor:pointer;">禁用</span></div>
+    <div class="digg" style="margin-top:10px;float:right;margin-right: 30px;">
+               {$page}
+    </div>
+    
+<script src="__PUBLIC__/artDialog/lib/sea.js"></script>    
+<script>
+seajs.config({
+  alias: {
+    "jquery": "jquery-1.10.2.js"
+  }
+});
+</script>
+<script>
+	$(function(){
+		//启用设置
+		$('.enable').click(function(){
+			var userid = $(this).attr('_userid');
+			if($.trim(userid) == '')
+			{
+				return false;
+			}
+			//$.post("{:U('Store/edit')}", {ids : userid}, function(obj){
+				//window.location.reload();
+			//});
+			$.ajax({
+				type:"GET",
+				// 大U生成的地址默认带后缀，如：/index.php/Admin/Goods/ajaxGetAttr.html/type_id/+type_id
+				// 第三个参数就是去掉.html后缀否则TP会报错
+				url:"<?php echo U('ajaxEnable','',FALSE)?>/userid/"+userid,
+				success:function(data)
+				{
+					 window.location.reload();
+				}
+			});
+		});
+		
+		
+		
+		//全选设置
+		$('#ids').click(function(){
+			if($(this).is(':checked')){
+				$(this).parents('table').find('input[type=checkbox]').prop("checked",true);
+			}
+			else{
+				$(this).parents('table').find('input[type=checkbox]').prop("checked",false);
+			}
+		});
+		
+		//禁用设置
+		$('#disable').click(function(){
+			var _checkbox = $('table').find('input[name=ids]');
+			var str = '';
+			_checkbox.each(function(){
+				if($(this).is(':checked')){
+					str += $(this).val()+','
+				}
+			});
+			if(str == ''){
+				return false;
+			}
+			seajs.use(['jquery', '__PUBLIC__/artDialog/src/dialog'], function ($, dialog) {
+				var d = dialog({
+					title:'提示',
+					content:'确定要禁用选中项吗?',
+					lock:true,
+					cancel:true,
+					width:300,
+					ok:function(){
+						$.ajax({
+							typr:"GET",
+							url:"<?php echo U('ajaxDisable','',FALSE)?>/userids/"+str,
+							success:function(data)
+							{
+								window.location.reload(); 
+							}
+						});
+					},
+					okValue: '确定',
+					cancelValue: '关闭'
+				});
+				d.show();
+			});
+		});
+		
+		
+	});
+</script>

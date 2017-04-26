@@ -1,0 +1,118 @@
+<layout name="Index/header_footer" />
+<div class="panel-body">
+<div class="panel-default">
+<form class="form-inline" action="__SELF__"  method="get">  
+    角色名称：
+    <input type="text" name="role_name" id="rolename"class="abc input-default" placeholder="输入角色名称搜索"  value="<?php echo I(get.role_name); ?>" />&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; 
+    <a href="<?php echo U('add'); ?>"  class="addright" ><span class="glyphicon glyphicon-plus">添加角色</span></a>
+</form>
+</div>
+<table class="table table-bordered table-hover definewidth m10">
+    <thead>
+    <tr>
+        <th>角色名称</th>
+        <th>权限名称</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <if condition="!empty($data)">
+    <foreach name="data" item="vo">
+        <tr>
+        <td>{$vo['role_name']}</td>
+        <td>{$vo['pri_name']}</td>
+        <td>
+			【<a href="<?php echo U('edit?id='.$vo['id']); ?>" >修改</a>】
+			【<a href="<?php echo U('delete?id='.$vo['id']); ?>" onclick="return confirm('确定要删除吗？');" title="移除">移除</a>】
+        </td>
+        </tr>   
+    </foreach>	
+    <else />
+        <tr><td colspan="11">没有相关结果!</td></tr>
+    </if>
+</table>
+    <div class="digg" style="margin-top:10px;float:right;margin-right: 30px;">
+               {$page}
+    </div>
+    
+<script src="__PUBLIC__/artDialog/lib/sea.js"></script>    
+<script>
+seajs.config({
+  alias: {
+    "jquery": "jquery-1.10.2.js"
+  }
+});
+</script>
+<script>
+	$(function(){
+		//启用设置
+		$('.enable').click(function(){
+			var userid = $(this).attr('_userid');
+			if($.trim(userid) == '')
+			{
+				return false;
+			}
+			//$.post("{:U('Store/edit')}", {ids : storeid}, function(obj){
+				//window.location.reload();
+			//});
+			$.ajax({
+				type:"GET",
+				// 大U生成的地址默认带后缀，如：/index.php/Admin/Goods/ajaxGetAttr.html/type_id/+type_id
+				// 第三个参数就是去掉.html后缀否则TP会报错
+				url:"<?php echo U('ajaxEnable','',FALSE)?>/userid/"+userid,
+				success:function(data)
+				{
+					 window.location.reload();
+				}
+			});
+		});
+		
+		//全选设置
+		$('#ids').click(function(){
+			if($(this).is(':checked')){
+				$(this).parents('table').find('input[type=checkbox]').prop("checked",true);
+			}
+			else{
+				$(this).parents('table').find('input[type=checkbox]').prop("checked",false);
+			}
+		});
+		
+		//禁用设置
+		$('#disable').click(function(){
+			var _checkbox = $('table').find('input[name=ids]');
+			var str = '';
+			_checkbox.each(function(){
+				if($(this).is(':checked')){
+					str += $(this).val()+','
+				}
+			});
+			if(str == ''){
+				return false;
+			}
+			seajs.use(['jquery', '__PUBLIC__/artDialog/src/dialog'], function ($, dialog) {
+				var d = dialog({
+					title:'提示',
+					content:'确定要禁用选中项吗?',
+					lock:true,
+					cancel:true,
+					width:300,
+					ok:function(){
+						$.ajax({
+							typr:"GET",
+							url:"<?php echo U('ajaxDisable','',FALSE)?>/userids/"+str,
+							success:function(data)
+							{
+								window.location.reload(); 
+							}
+						});
+					},
+					okValue: '确定',
+					cancelValue: '关闭'
+				});
+				d.show();
+			});
+		});
+		
+		
+	});
+</script>

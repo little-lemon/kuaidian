@@ -1,0 +1,7 @@
+<?php
+array (size=5)
+'name' => string '3.jpg' (length=5)
+'type' => string '' (length=0)
+'tmp_name' => string '' (length=0)
+'error' => int 1
+'size' => int 0

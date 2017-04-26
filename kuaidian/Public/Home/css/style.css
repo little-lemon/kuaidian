@@ -1,0 +1,54 @@
+/* CSS Document */
+/**********index.html**************/
+.cus-menu{
+	border:1px solid #ddd !important;
+	border-radius:5px;
+}
+.cus-menu li ul{
+	padding-left:35px;
+}
+
+.cus-content .table th{
+	font-size:13px;
+	text-align:center;
+	background-color:#f5f5f5;
+}
+
+.cus-content .table td{
+	font-size:12px;
+	vertical-align:middle;
+}
+.cus-content .pagination{
+	margin:0px;
+}
+/************************/
+
+/**********Category/add**************/
+.tableleft{
+	text-align:left;
+	padding-left:5px;
+	background-color:#f5f5f5;
+}
+
+/************************/
+
+/********Category/lst****************/
+.definewidth{
+	width:96%;
+	margin:auto;		
+}
+.m10{
+	margin-top:10px;
+}
+.m20{
+	padding-top:20px;
+}
+
+/* .addright{
+	float:right;
+	background-color:#DDDDDD;
+	width:100px;
+	height:20px;
+	text-align:center;
+} */
+/************************/

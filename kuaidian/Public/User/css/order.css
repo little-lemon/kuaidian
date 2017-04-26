@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+.left {
+	float:left;
+}
+
+.line_height {
+	height:25px;
+	line-height:25px;
+}
+
+.tooltips {
+	color: #428bca;
+	font-weight: bold;
+}
